@@ -17,3 +17,6 @@ Enn så lenge på min bruker. Regner med at det skal inn til ltg-oslo etter hver
 
 ## Publisering av dataene
 Regner med at vi ikke skal publisere dataene ennå, så jeg tenker jeg lar det være et privat repo enn så lenge.
+
+## Logg
+Mandag 6. juli: Dataene konverteres OK
