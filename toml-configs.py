@@ -13,7 +13,7 @@ source = "wl-coref-ncc/config.toml"
 toml_folder = "wl-coref-ncc/tomls"
 train_path = "data/wl-formatted_heads/narc_train_head.jsonl"
 runpath = "wl-coref-ncc/run.py"
-fox_slurm_base = "/fp/homes01/u01/ec-egilron/wl-coref-ncc/tomls/fox_base.slurm"
+fox_slurm_base = "wl-coref-ncc/tomls/fox_base.slurm"
 
 with open(source) as rf:
     base_toml ={'DEFAULT': toml.loads(rf.read())['DEFAULT']}
@@ -28,7 +28,7 @@ defaults = base_toml['DEFAULT']
 # %%
 
 # ## Changes from the default that is shared by all experiments go here
-run_id = "models04"
+run_id = "POC"
 defaults["rough_k"] = 50
 
 defaults["bert_model"] = "/fp/homes01/u01/ec-egilron/transformers/nb-bert-base"

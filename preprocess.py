@@ -7,7 +7,7 @@ ANN_FOLDER = "data/annotations"
 JSONLINES_DOCWISE = "data/jsonlines"
 JSONLINES_WL = "data/wl-formatted"
 NAME_CORE = "narc" # First part of wl-formatted filenames
-variations = {"bokmaal":"/home/egil/gits_wsl/narc-baseline/Norwegian-Coreference-Corpus/finished_bokmaal"}
+variations = {"bokmaal":"Norwegian-Coreference-Corpus/finished_bokmaal"}
 
 
 
