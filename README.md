@@ -43,8 +43,27 @@ The end result is a folder with `_heads` suffix inside the `data` folder.
 - Originally, wl-coref saves the model after each epoch. This we modify in coref_model.py, where save_weights() is called 
 
 
+##  Evaluation and prediction
+We run the prediction in wl-coref, and evaluate with coreference-eval
 
+### Predictions
+norBERT2 and XLM-roBERTa
 
+```
+python wl-coref-ncc/predict.py POC2_000 data/wl-formatted/narc_development.jsonl POC2_000_dev_predicted.jsonlines --config-file experiments/tomls/POC2.toml
+Loading /fp/homes01/u01/ec-egilron/transformers/221...
+
+python wl-coref-ncc/predict.py POC2_000 data/wl-formatted/narc_test.jsonl POC2_000_test_predicted.jsonlines --config-file experiments/tomls/POC2.toml
+Loading /fp/homes01/u01/ec-egilron/transformers/221...
+
+python wl-coref-ncc/predict.py POC2_001 data/wl-formatted/narc_test.jsonl POC2_001_test_predicted.jsonlines --config-file experiments/tomls/POC2.toml
+Loading xlm-roberta-base...
+
+python wl-coref-ncc/predict.py POC2_001 data/wl-formatted/narc_development.jsonl POC2_001_dev_predicted.jsonlines --config-file experiments/tomls/POC2.toml
+Loading xlm-roberta-base...
+
+```
+### Evaluation
 
 
 
