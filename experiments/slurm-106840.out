@@ -1,0 +1,127 @@
+Starting job 106840 on gpu-2 at Wed Jul 6 09:01:54 CEST 2022
+
+Collecting jsonlines
+  Using cached jsonlines-3.1.0-py3-none-any.whl (8.6 kB)
+Collecting attrs>=19.2.0
+  Using cached attrs-21.4.0-py2.py3-none-any.whl (60 kB)
+Installing collected packages: attrs, jsonlines
+Successfully installed attrs-21.4.0 jsonlines-3.1.0
+WARNING: You are using pip version 20.2.1; however, version 22.1.2 is available.
+You should consider upgrading via the '/fp/homes01/u01/ec-egilron/venvs/trans_nopt/bin/python3 -m pip install --upgrade pip' command.
+Collecting toml
+  Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Installing collected packages: toml
+Successfully installed toml-0.10.2
+WARNING: You are using pip version 20.2.1; however, version 22.1.2 is available.
+You should consider upgrading via the '/fp/homes01/u01/ec-egilron/venvs/trans_nopt/bin/python3 -m pip install --upgrade pip' command.
+Collecting transformers==3.2.0
+  Using cached transformers-3.2.0-py3-none-any.whl (1.0 MB)
+Collecting numpy
+  Using cached numpy-1.23.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+Collecting sentencepiece!=0.1.92
+  Using cached sentencepiece-0.1.96-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+Collecting filelock
+  Using cached filelock-3.7.1-py3-none-any.whl (10 kB)
+Collecting packaging
+  Using cached packaging-21.3-py3-none-any.whl (40 kB)
+Collecting regex!=2019.12.17
+  Using cached regex-2022.6.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (764 kB)
+Collecting tqdm>=4.27
+  Using cached tqdm-4.64.0-py2.py3-none-any.whl (78 kB)
+Processing /fp/homes01/u01/ec-egilron/.cache/pip/wheels/82/ab/9b/c15899bf659ba74f623ac776e861cf2eb8608c1825ddec66a4/sacremoses-0.0.53-py3-none-any.whl
+Collecting requests
+  Using cached requests-2.28.1-py3-none-any.whl (62 kB)
+Collecting tokenizers==0.8.1.rc2
+  Using cached tokenizers-0.8.1rc2-cp38-cp38-manylinux1_x86_64.whl (3.0 MB)
+Collecting pyparsing!=3.0.5,>=2.0.2
+  Using cached pyparsing-3.0.9-py3-none-any.whl (98 kB)
+Collecting click
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting six
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting joblib
+  Using cached joblib-1.1.0-py2.py3-none-any.whl (306 kB)
+Collecting urllib3<1.27,>=1.21.1
+  Using cached urllib3-1.26.9-py2.py3-none-any.whl (138 kB)
+Collecting certifi>=2017.4.17
+  Using cached certifi-2022.6.15-py3-none-any.whl (160 kB)
+Collecting charset-normalizer<3,>=2
+  Using cached charset_normalizer-2.1.0-py3-none-any.whl (39 kB)
+Collecting idna<4,>=2.5
+  Using cached idna-3.3-py3-none-any.whl (61 kB)
+Installing collected packages: numpy, sentencepiece, filelock, pyparsing, packaging, regex, tqdm, click, six, joblib, sacremoses, urllib3, certifi, charset-normalizer, idna, requests, tokenizers, transformers
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+pandas 1.1.4 requires python-dateutil>=2.7.3, which is not installed.
+pandas 1.1.4 requires pytz>=2017.2, which is not installed.
+Successfully installed certifi-2022.6.15 charset-normalizer-2.1.0 click-8.1.3 filelock-3.7.1 idna-3.3 joblib-1.1.0 numpy-1.23.0 packaging-21.3 pyparsing-3.0.9 regex-2022.6.2 requests-2.28.1 sacremoses-0.0.53 sentencepiece-0.1.96 six-1.16.0 tokenizers-0.8.1rc2 tqdm-4.64.0 transformers-3.2.0 urllib3-1.26.9
+WARNING: You are using pip version 20.2.1; however, version 22.1.2 is available.
+You should consider upgrading via the '/fp/homes01/u01/ec-egilron/venvs/trans_nopt/bin/python3 -m pip install --upgrade pip' command.
+Starting experiment LARGE_000
+python: can't open file 'wl-coref-ncc/run.py': [Errno 2] No such file or directory
+
+Task and CPU usage stats:
+JobID           JobName  AllocCPUS   NTasks     MinCPU MinCPUTask     AveCPU    Elapsed ExitCode 
+------------ ---------- ---------- -------- ---------- ---------- ---------- ---------- -------- 
+106840             narc          1                                             00:00:25      2:0 
+106840.batch      batch          1        1   00:00:11          0   00:00:11   00:00:25      2:0 
+106840.exte+     extern          1        1   00:00:00          0   00:00:00   00:00:25      0:0 
+
+Memory usage stats:
+JobID            MaxRSS MaxRSSTask     AveRSS MaxPages   MaxPagesTask   AvePages 
+------------ ---------- ---------- ---------- -------- -------------- ---------- 
+106840                                                                           
+106840.batch       160K          0       160K        0              0          0 
+106840.exte+          0          0          0        0              0          0 
+
+Disk usage stats:
+JobID         MaxDiskRead MaxDiskReadTask    AveDiskRead MaxDiskWrite MaxDiskWriteTask   AveDiskWrite 
+------------ ------------ --------------- -------------- ------------ ---------------- -------------- 
+106840                                                                                                
+106840.batch            0               0              0            0                0              0 
+106840.exte+        0.01M               0          0.01M            0                0              0 
+
+GPU usage stats:
+Successfully retrieved statistics for job: 106840. 
++------------------------------------------------------------------------------+
+| GPU ID: 3                                                                    |
++====================================+=========================================+
+|-----  Execution Stats  ------------+-----------------------------------------|
+| Start Time                         | Wed Jul  6 09:01:54 2022                |
+| End Time                           | Wed Jul  6 09:02:20 2022                |
+| Total Execution Time (sec)         | 25.39                                   |
+| No. of Processes                   | 1                                       |
++-----  Performance Stats  ----------+-----------------------------------------+
+| Energy Consumed (Joules)           | 0                                       |
+| Power Usage (Watts)                | Avg: 311.052, Max: 311.052, Min: 311... |
+| Max GPU Memory Used (bytes)        | 24130879488                             |
+| SM Clock (MHz)                     | Avg: 765, Max: 765, Min: 765            |
+| Memory Clock (MHz)                 | Avg: 1215, Max: 1215, Min: 1215         |
+| SM Utilization (%)                 | Avg: 100, Max: 100, Min: 100            |
+| Memory Utilization (%)             | Avg: 0, Max: 0, Min: 0                  |
+| PCIe Rx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
+| PCIe Tx Bandwidth (megabytes)      | Avg: N/A, Max: N/A, Min: N/A            |
++-----  Event Stats  ----------------+-----------------------------------------+
+| Single Bit ECC Errors              | 0                                       |
+| Double Bit ECC Errors              | 0                                       |
+| PCIe Replay Warnings               | 0                                       |
+| Critical XID Errors                | 0                                       |
++-----  Slowdown Stats  -------------+-----------------------------------------+
+| Due to - Power (%)                 | 0                                       |
+|        - Thermal (%)               | 0                                       |
+|        - Reliability (%)           | Not Supported                           |
+|        - Board Limit (%)           | Not Supported                           |
+|        - Low Utilization (%)       | Not Supported                           |
+|        - Sync Boost (%)            | 0                                       |
++--  Compute Process Utilization  ---+-----------------------------------------+
+| PID                                | 3738111                                 |
+|     Avg SM Utilization (%)         | 0                                       |
+|     Avg Memory Utilization (%)     | 0                                       |
++-----  Overall Health  -------------+-----------------------------------------+
+| Overall Health                     | Healthy                                 |
++------------------------------------+-----------------------------------------+
+
+
+Job 106840 completed at Wed Jul 6 09:02:20 CEST 2022

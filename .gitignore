@@ -1,6 +1,6 @@
 data/
 *.pickle
-
+*.pt
 
 
 # Byte-compiled / optimized / DLL files
@@ -134,3 +134,4 @@ dmypy.json
 .pyre/
 
 .vscode/settings.json
+experiments/tomls/POC2/POC2_000_(e20_2022.07.06_10.31).pt
