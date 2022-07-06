@@ -30,10 +30,15 @@ for experiment in ["POC2_000", "POC2_001"]:
             assert os.path.exists(f)
         gold_clusters = read_clusters(gold_path)
         pred_clusters = read_clusters(pred_path )
-        print(gold_clusters)
-        print("PRED")
-        print(pred_clusters)
 
+        assert len(gold_clusters) == len(pred_clusters) # Should be one for each document
+
+        scorer = corefeval.Scorer()
+        for gold_doc, pred_doc in zip(gold_clusters, pred_clusters):
+            scorer.update(corefeval.Document(predicted = pred_doc, truth = gold_doc))
+        
+        conll_f1, metrics = scorer.detailed_score(experiment, split)
         # Feiler, har fire, ikke tre listenivåer: [[[[1, 3], [26, 27], [
-        corefeval.get_metrics(pred_clusters, gold_clusters)
-
+        # corefeval.get_metrics(pred_clusters, gold_clusters)
+        print(conll_f1)
+        print(metrics)
