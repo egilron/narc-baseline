@@ -40,6 +40,7 @@ The end result is a folder with `_heads` suffix inside the `data` folder.
 - The experiments require much GPU memory, 24 GB has not been enough usually. `rough_k` can be set to 5, to train on 12 GB resources, just to see that it runs, but the performance suffers significantly
 - Some Norwegian transformers-based models would not download with the transformers Automodel, but we got it to load from a local file storage. 
 - With our repo-in-repo structure, setting absolute paths can be helpful
+- Originally, wl-coref saves the model after each epoch. This we modify in coref_model.py, where save_weights() is called 
 
 
 
