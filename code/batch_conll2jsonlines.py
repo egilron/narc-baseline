@@ -63,7 +63,7 @@ import argparse
 from conversion.conll_transform import read_file, sentpos2textpos, compute_chains, read_files
 
 
-def main(
+def convert(
         infpath, outfpath,
         sep=None, token_col=3, speaker_col="_", add_coref=True, par_col=0,
         ignore_double_indices=True,
@@ -160,4 +160,4 @@ if __name__ == "__main__":
     )
     
     _args = parser.parse_args()
-    main(infpath=_args.folder, outfpath=_args.output)
+    convert(infpath=_args.folder, outfpath=_args.output)
