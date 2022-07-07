@@ -6,7 +6,7 @@ import toml
 import os
 # from transformers import AutoModel, BertModel, AutoModelForMaskedLM
 
-run_id = "POC2"
+run_id = "POC2test"
 
 # %%
 # Paths from "experiments" folder
@@ -36,14 +36,21 @@ defaults = base_toml['DEFAULT']
 # ## Changes from the default that is shared by all experiments go here
 
 defaults["rough_k"] = 50
+defaults["train_data"] = train_path
+defaults["test_data"] = train_path.replace("train", "test")
+# defaults["dev_data"] = train_path.replace("train", "development")
+defaults["dev_data"] = defaults["test_data"]    ########################## WARNING 
+
+
+
+
 
 defaults["bert_model"] = "/fp/homes01/u01/ec-egilron/transformers/nb-bert-base"
 defaults["device"] = "cuda:0"
 defaults["bert_finetune"] = True
 defaults["train_epochs"] = 20
-defaults["train_data"] = train_path
-defaults["dev_data"] = train_path.replace("train", "development")
-defaults["test_data"] = train_path.replace("train", "test")
+
+
 out_folder = os.path.join(toml_folder, run_id)
 defaults["conll_log_dir"] = os.path.join(out_folder, "conll_logs")
 defaults["data_dir"] = out_folder
