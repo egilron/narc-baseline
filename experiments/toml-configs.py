@@ -6,7 +6,7 @@ import toml
 import os
 # from transformers import AutoModel, BertModel, AutoModelForMaskedLM
 
-run_id = "POC2test"
+run_id = "POC5"
 
 # %%
 # Paths from "experiments" folder
@@ -38,14 +38,14 @@ defaults = base_toml['DEFAULT']
 defaults["rough_k"] = 50
 defaults["train_data"] = train_path
 defaults["test_data"] = train_path.replace("train", "test")
-# defaults["dev_data"] = train_path.replace("train", "development")
-defaults["dev_data"] = defaults["test_data"]    ########################## WARNING 
+defaults["dev_data"] = train_path.replace("train", "development")
+#defaults["dev_data"] = defaults["test_data"]    ########################## WARNING 
 
 
 
 
 
-defaults["bert_model"] = "/fp/homes01/u01/ec-egilron/transformers/nb-bert-base"
+defaults["bert_model"] = "/fp/homes01/u01/ec-egilron/transformers/roberta_jan_128_scandinavian"
 defaults["device"] = "cuda:0"
 defaults["bert_finetune"] = True
 defaults["train_epochs"] = 20
@@ -66,12 +66,13 @@ if not os.path.exists(out_folder):
 # ## Create lists of what should be iterated over, and write a toml file with each of these experiments in the one file
 # alternatives = {"bert_models": ["/fp/homes01/u01/ec-egilron/norbert2", "xlm-roberta-base", "bert-base-multilingual-cased", "/fp/homes01/u01/ec-egilron/nb-bert-base"]}
 # alternatives = {"bert_models": ["/fp/homes01/u01/ec-egilron/transformers/nb-bert-base",  "xlm-roberta-base"]}
-alternatives = {"bert_model": [  "/fp/homes01/u01/ec-egilron/transformers/221", "xlm-roberta-base", "NbAiLab/roberta_jan_128_scandinavian" ]}
+alternatives = {"bert_model": [  "/fp/homes01/u01/ec-egilron/transformers/221", "xlm-roberta-base", "/fp/homes01/u01/ec-egilron/transformers/roberta_jan_128_scandinavian" , "bert-base-multilingual-cased", "/fp/homes01/u01/ec-egilron/nb-bert-base"]}
+exp_names = ["norBERT2", "xlm-r", "roberta-scand", "mbert", "nbBERT"]
 exp_ids = []
 out_toml = {'DEFAULT': defaults}
 for param_name, alts in alternatives.items():
-    for idx, alt in enumerate(alts):
-        experiment_id = run_id+"_"+str(idx).zfill(3)
+    for idx, alt in zip(exp_names,alts):
+        experiment_id = run_id+"-"+idx
         out_toml[experiment_id] = {param_name: alt}
         exp_ids.append(experiment_id)
 out_toml_path = os.path.join(toml_folder, run_id+".toml")
@@ -132,10 +133,10 @@ if fox:
             out_file = base+"\n"+"\n".join(scriptlines[1:])
             wf.write(out_file) 
 
-else:
-    with open (script_path, "w") as wf:
-        wf.write("\n".join(scriptlines))
-    print(script_path)
+
+with open (script_path, "w") as wf:
+    wf.write("\n".join(scriptlines))
+print(script_path)
 
 
 
