@@ -1,0 +1,27 @@
+norbert2 and xlm-r evaluation scores according to wl-coref
+
+
+xlm-r dev:
+(trans_nopt) ~/narc-baseline/experiments $ python /fp/homes01/u01/ec-egilron/narc-baseline/wl-coref-ncc/run.py eval POC5-xlm-r --config-file /fp/homes01/u01/ec-egilron/narc-baseline/experiments/tomls/POC5.toml --data-split dev
+Loading xlm-roberta-base...
+Loading from /fp/homes01/u01/ec-egilron/narc-baseline/experiments/tomls/POC5/POC5-xlm-r_(e20_2022.07.07_15.00).pt...
+dev: | WL:  loss: 0.14810, f1: 0.59032, p: 0.59854, r: 0.58232 | SL:  sa: 0.89846, f1: 0.56763, p: 0.57798, r: 0.55765: 100% 33/33 [00:02<00:00, 12.40docs/s]
+
+xlm-r test:
+(trans_nopt) ~/narc-baseline/experiments $ python /fp/homes01/u01/ec-egilron/narc-baseline/wl-coref-ncc/run.py eval POC5-xlm-r --config-file /fp/homes01/u01/ec-egilron/narc-baseline/experiments/tomls/POC5.toml --data-split test
+Loading xlm-roberta-base...
+Loading from /fp/homes01/u01/ec-egilron/narc-baseline/experiments/tomls/POC5/POC5-xlm-r_(e20_2022.07.07_15.00).pt...
+test: | WL:  loss: 0.13645, f1: 0.61376, p: 0.62096, r: 0.60673 | SL:  sa: 0.96385, f1: 0.59965, p: 0.61112, r: 0.58860: 100% 33/33 [00:02<00:00, 12.47docs/s]
+
+
+norbert2 dev:
+(trans_nopt) ~/narc-baseline/experiments $ python /fp/homes01/u01/ec-egilron/narc-baseline/wl-coref-ncc/run.py eval POC5-norBERT2 --config-file /fp/homes01/u01/ec-egilron/narc-baseline/experiments/tomls/POC5.toml --data-split dev
+Loading /fp/homes01/u01/ec-egilron/transformers/221...
+Loading from /fp/homes01/u01/ec-egilron/narc-baseline/experiments/tomls/POC5/POC5-norBERT2_(e20_2022.07.07_14.53).pt...
+dev: | WL:  loss: 0.26245, f1: 0.58077, p: 0.66957, r: 0.51276 | SL:  sa: 0.89968, f1: 0.56151, p: 0.65265, r: 0.49270: 100% 33/33 [00:02<00:00, 11.88docs/s]
+
+norbert2 test:
+(trans_nopt) ~/narc-baseline/experiments $ python /fp/homes01/u01/ec-egilron/narc-baseline/wl-coref-ncc/run.py eval POC5-norBERT2 --config-file /fp/homes01/u01/ec-egilron/narc-baseline/experiments/tomls/POC5.toml --data-split test
+Loading /fp/homes01/u01/ec-egilron/transformers/221...
+Loading from /fp/homes01/u01/ec-egilron/narc-baseline/experiments/tomls/POC5/POC5-norBERT2_(e20_2022.07.07_14.53).pt...
+test: | WL:  loss: 0.21651, f1: 0.61410, p: 0.68065, r: 0.55939 | SL:  sa: 0.95927, f1: 0.60171, p: 0.67303, r: 0.54405: 100% 33/33 [00:02<00:00, 11.80docs/s]
