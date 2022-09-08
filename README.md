@@ -1,5 +1,6 @@
 # narc-baseline
 Baseline models for the Norwegian Anaphora Resolution Corpus
+This repository is the actual working repo for the experiments, probably containing imperfect and redundant code. We hope it may still be useful for anyone who wish to inspect the baseline model referenced in **NARC – Norwegian Anaphora Resolution Corpus** by Petter Mæhlum et al. 
 
 ## Convert and prepare the data
 Be in the root of this repository  
@@ -63,7 +64,21 @@ python wl-coref-ncc/predict.py POC2_001 data/wl-formatted/narc_development.jsonl
 Loading xlm-roberta-base...
 
 ```
-### Evaluation
+## Citation
+If you use this code in you work, please cite the paper **NARC – Norwegian Anaphora Resolution Corpus** by Petter Mæhlum et al. 
+The underlying wl-coref model can be cited as follows:
+```
+@inproceedings{dobrovolskii-2021-word,
+title = "Word-Level Coreference Resolution",
+author = "Dobrovolskii, Vladimir",
+booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing",
+month = nov,
+year = "2021",
+address = "Online and Punta Cana, Dominican Republic",
+publisher = "Association for Computational Linguistics",
+url = "https://aclanthology.org/2021.emnlp-main.605",
+pages = "7670--7675"}
+```
 
 
 
