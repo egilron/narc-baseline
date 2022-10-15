@@ -7,8 +7,7 @@ Be in the root of this repository
 ### Get the data 
 
 
-Presently, by `git clone https://github.com/ltgoslo/Norwegian-Coreference-Corpus` 
-
+Presently, you can use the preliminary dataset folder here. The finalized dataset is soon to come to `https://github.com/ltgoslo/NARC`
 
 ### Get the machinery 
 
@@ -22,6 +21,7 @@ Clone this fork of wl-coref: `git clone https://github.com/egilron/wl-coref-ncc.
 
 
 ### Run the preprocessing 
+(Necceccary after downloading new versions of the dataset)  
 
 `preprocess.py`  
 Make sure the paths there are correct for you.  
