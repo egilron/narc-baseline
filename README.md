@@ -7,8 +7,7 @@ Be in the root of this repository
 ### Get the data 
 
 
-Presently, by `git clone https://github.com/ltgoslo/Norwegian-Coreference-Corpus` 
-
+Presently, you can use the preliminary dataset folder here. The finalized dataset is soon to come to `https://github.com/ltgoslo/NARC`
 
 ### Get the machinery 
 
@@ -22,6 +21,7 @@ Clone this fork of wl-coref: `git clone https://github.com/egilron/wl-coref-ncc.
 
 
 ### Run the preprocessing 
+(Necceccary after downloading new versions of the dataset)  
 
 `preprocess.py`  
 Make sure the paths there are correct for you.  
@@ -66,6 +66,27 @@ Loading xlm-roberta-base...
 ```
 ## Citation
 If you use this code in you work, please cite the paper **NARC – Norwegian Anaphora Resolution Corpus** by Petter Mæhlum et al. 
+```
+@inproceedings{maehlum-etal-2022-narc,
+    title = "{NARC} {--} {N}orwegian Anaphora Resolution Corpus",
+    author = "M{\ae}hlum, Petter  and
+      Haug, Dag  and
+      J{\o}rgensen, Tollef  and
+      K{\aa}sen, Andre  and
+      N{\o}klestad, Anders  and
+      R{\o}nningstad, Egil  and
+      Solberg, Per Erik  and
+      Velldal, Erik  and
+      {\O}vrelid, Lilja",
+    booktitle = "Proceedings of the Fifth Workshop on Computational Models of Reference, Anaphora and Coreference",
+    month = oct,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.crac-1.6",
+    pages = "48--60",
+}
+```
 The underlying wl-coref model can be cited as follows:
 ```
 @inproceedings{dobrovolskii-2021-word,
